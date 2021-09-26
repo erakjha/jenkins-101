@@ -5,6 +5,5 @@ ls -lrth
 date
 uname -a
 hostname -f
-w
 
 echo "hello world"
