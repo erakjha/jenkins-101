@@ -13,5 +13,10 @@ pipeline {
                 echo 'Hello World I am Back'
             }
         }
+        stage('Bye') {
+            steps {
+                echo 'Good Night'
+            }
+        }
     }
 }
