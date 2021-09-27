@@ -2,6 +2,7 @@ pipeline {
     agent any
     options {
         buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '5'))
+        timestamps()
     }
     triggers {
         pollSCM('H */4 * * 1-5')
