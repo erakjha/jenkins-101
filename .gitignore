@@ -15,6 +15,7 @@ downloads/
 eggs/
 .idea/
 .eggs/
+.vagrant/
 lib/
 lib64/
 parts/
