@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+      environment {
+       GIT_COMMON_CREDS = credentials('github.erakjha')
+    }
+    stages {
+                    stage('TEST-A') {
+                            environment {
+                            ENV_VALUE="TEST-A"
+                            }
+                            steps {
+                                 sh '''
+                                 date
+                                 time
+                                 hostname
+                                 echo "$GIT_COMMON_CREDS"
+                                 echo "$GIT_COMMON_CREDS_USR"
+                                 echo "$GIT_COMMON_CREDS_PSW"
+                                 '''
+                            }
+                        }
+
+       stage('TEST-B') {
+                            environment {
+                            ENV_VALUE="TEST-B"
+                            }
+                            steps {
+                                 sh '''
+                                 date
+                                 time
+                                 hostname
+                                 '''
+                            }
+                        }
+                        }
+                        }
