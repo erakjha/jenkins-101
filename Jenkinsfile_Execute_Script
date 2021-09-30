@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+      environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
+    stages {
+                             stage('TEST-A') {
+                            steps {
+                                 sh 'date'
+                                 sh 'time'
+                                 sh 'hostname'
+                                 echo "Database engine is ${DB_ENGINE}"
+                                 echo "DISABLE_AUTH is ${DISABLE_AUTH}"
+                                 sh 'printenv'
+                            }
+                        }
+       stage('TEST-B') {
+                            steps {
+                                 sh 'date'
+                                 sh 'time'
+                                 sh 'hostname'
+                                 echo "Database engine is ${DB_ENGINE}"
+                                 echo "DISABLE_AUTH is ${DISABLE_AUTH}"
+                                 sh 'printenv'
+                            }
+                        }
+                        }
+                        }

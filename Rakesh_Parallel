@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            parallel {
+                       stage('TEST-A') {
+                            steps {
+                                echo "TEST-A"
+                            }
+                        }
+                        stage('TEST-B') {
+                            steps {
+                                echo "TEST- B"
+                            }
+                        }
+                        stage('TEST-C') {
+                            steps {
+                                echo "TEST- C"
+                            }
+                        }
+
+}
+}
+}
+}

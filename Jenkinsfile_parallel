@@ -21,7 +21,7 @@ pipeline {
                     }
                 }
                 stage('Branch C') {
-                    
+
                     stages {
                         stage('Nested 1') {
                             steps {
