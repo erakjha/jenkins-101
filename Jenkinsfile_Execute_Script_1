@@ -1,7 +1,7 @@
 pipeline {
     agent any
       environment {
-       GIT_COMMON_CREDS = credentials('github.erakjha')
+       VANI = credentials('github.erakjha')
     }
     stages {
                     stage('TEST-A') {
@@ -13,9 +13,9 @@ pipeline {
                                  date
                                  time
                                  hostname
-                                 echo "$GIT_COMMON_CREDS"
-                                 echo "$GIT_COMMON_CREDS_USR"
-                                 echo "$GIT_COMMON_CREDS_PSW"
+                                 echo "$VANI"
+                                 echo "$VANI_USR"
+                                 echo "$VANI_PSW"
                                  '''
                             }
                         }
