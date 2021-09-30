@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+       stages {
+         stage('Bank') {
+            parallel {
+                stage('ICICI Bank') {
+                    stages {
+                        stage('ICICI Jaipur') {
+                            steps {
+                                echo "ICICI Branch A"
+                            }
+                        }
+                        stage('ICICI Sheoganj') {
+                            steps {
+                                echo "ICICI Branch B"
+                            }
+                        }
+                    }
+                             }
+                stage('IDBI Bank') {
+                    steps {
+                         sh 'echo "IDBI_JAIPUR"'
+                             }
+                            }
+                stage('SBI Bank') {
+                    stages {
+                        stage('SBI Jaipur') {
+                            steps {
+                                echo "SBI Branch A"
+                            }
+                        }
+                        stage('SBI Sheoganj') {
+                            steps {
+                                echo "SBI Branch B"
+                            }
+                        }
+                    }
+                    }
+        }
+    }
+            stage('RBI') {
+                  steps {
+                      echo 'RBI BANK LIST.'
+                        }
+                         }
+}
+}
+
