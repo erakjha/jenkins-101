@@ -4,10 +4,9 @@ pipeline {
         stage('Example') {
 
             steps {
-                sh 'date'
                script  {
-                    env.current_date= sh(script: 'date')
-                    echo "${env.currect_date}"
+                    env.step_start_date= sh(returnStdout: true, script: 'date')
+                    echo "${env.step_start_date}"
                }
             }
         }
