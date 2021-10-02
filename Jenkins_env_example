@@ -5,7 +5,7 @@ pipeline {
 
             steps {
                script  {
-                    env.step_start_date= sh(returnStdout: true, script: 'date')
+                    env.step_start_date= sh(returnStdout: false, script: 'date')
                     echo "${env.step_start_date}"
                }
             }
