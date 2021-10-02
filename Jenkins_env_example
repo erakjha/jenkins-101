@@ -6,7 +6,9 @@ pipeline {
             steps {
                 sh 'date'
                script  {
-                    env.current_date= sh(script: date)               }
+                    env.current_date= sh(script: 'date')
+                    echo "${env.currect_date}"
+               }
             }
         }
     }
