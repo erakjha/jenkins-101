@@ -7,7 +7,7 @@ pipeline {
                script  {
                     env.step_start_date= sh(returnStdout: true, script: 'date')
                     echo "${env.step_start_date}"
-                    env.resp_1= sh(returnStdout: true, script: './mygithub.sh 1')
+                    env.resp_1= sh(returnStdout: false, script: './mygithub.sh 1')
                     echo "${env.resp_1}"
                }
             }
