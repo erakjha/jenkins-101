@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+        stages {
+        stage('Example') {
+
+            steps {
+                sh 'date'
+               script  {
+                    env.current_date= sh(script: date)               }
+            }
+        }
+    }
+}
