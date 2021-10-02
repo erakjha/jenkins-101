@@ -1,4 +1,9 @@
-node {
+node ('yash'){
+    properties(
+        [
+            pipelineTriggers([cron('0 * * * *')]),
+        ]
+    )
   stage('Build') {
   echo 'Building....'
   }
