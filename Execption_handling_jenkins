@@ -8,7 +8,7 @@ checkout scm
   echo 'Something failed, I should sound the klaxons!'
   echo "$exc"
   // throw
-  sh './mygitbash.sh 1'
+  sh './mygithub.sh 1'
   }
   }
 }
